@@ -1,0 +1,80 @@
+JAVA SCRIPT OBJECT
+
+exp1
+
+<div  id=demo></div>
+<script>
+
+var person = {
+    firstName : "   Raman ",
+    lastName  : "   Singh ",
+    age       : 50,
+    eyeColor  : "blue"
+}
+
+var student = { "rollno" :"120" ,"name":"hari","marks":120 };
+
+document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old." + student.rollno+"  "+student.name;
+</script>
+
+exp2
+
+<div  id="demo"></div>
+<script>
+var person = new Object()  // Object is predefined class of java script
+person.firstName = "Rohan";
+person.lastName = "kumar";
+person.age = 24;
+person.eyeColor = "blue"; 
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+exp3
+
+<div  id="demo"></div><script>
+    //this is a reference to current object
+     
+    function person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+    
+    var myFather = new person("John", "Doe", 50, "blue");
+    var myMother = new person("Sally", "Rally", 48, "green");
+    
+    document.getElementById("demo").innerHTML =
+    "My father is " + myFather.age + ". My mother is " + myMother.age; 
+    </script>
+
+exp5
+
+<p id="demo"></p>
+
+<script>
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25,phone:"343434",city:"Mohali"}; 
+var x;
+for (x in person) {
+    txt += x+":"+ person[x] + "<br>";
+}
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+
+exp6 
+
+<div id="demo"></div>
+<script>
+    var person = {
+        firstname: "John",
+        age: 50
+    };
+    delete person.age;
+
+    document.getElementById("demo").innerHTML =
+        "age " + person.age + ". firstname " + person.firstname;
+</script>
